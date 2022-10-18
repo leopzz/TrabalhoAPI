@@ -1,0 +1,14 @@
+URL base da API
+https://makeup-api.herokuapp.com/api/v1
+
+Parametro chave
+http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type= ...
+
+
+Nos utilizamos a api do site https://makeup-api.herokuapp.com/ , e usamos como parametro chave http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type= (no fim disso colocar o tipo de produto de acordo com a api).
+Nossa api usamos algumas funcoes onde no index puxamos uma imagem de cada tipo de produto da API para dar esse inicio e apresentacao dos produtos e como eles são
+Por seguinte criamos um outro html nomeado por nos de type.html onde tem a funcao primaria de API designar o tipo de produto usando o mesmo html(type) mudando apenas o final colocando o product_type fornecido por nos na API, e foi assim que dividimos os tipos de produtos no mesmo html sendo eles blush, lipstick, bronzer e eyeshadow
+Continuando nos pegamos um template de carrosel que usamos e moldamos ele para receber uma imagem (em nossa API estava como image_link) , e o titulo do produto(em nossa API estava como name )
+Por ultimo no type.html colocamos para quando clicasse nessa imagem dada pela API, isse ao outro html nomeado por nos de catalog.html
+Dentro do catalog.html puxamos novamente a funcao de titulo( name ) , a imagem ( product_link ) e adicionamos a descricao inteira do produto( em nossa API estava como description ) e colocamos todos responsivamente porem com as informacoes ampliadas, imagem deslocada para a esquerda com o titulo em cima, e por fim a descricao inteira do produto ao lado da imagem
+

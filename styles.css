@@ -1,0 +1,162 @@
+#back {
+    background-color: rgb(245, 184, 255);
+}
+#paidiv {
+    
+    background-color: rgb(255, 175, 255);
+    border: none;
+    border-radius: 0px;
+}
+#sondiv1 {
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 2px;
+    font-family: bradley hand, cursive;
+    font-weight: 600;
+    font-size: 2rem;
+    transition: 0.70s;
+} #sondiv1:hover {
+    background-color: white;
+    color: rgb(255, 175, 255);
+    text-decoration: none;
+    transition: 0.70s;
+} 
+
+#sondiv2 {
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 2px;
+    font-family: bradley hand, cursive;
+    font-weight: 500;
+    font-size: 4rem;
+} #sondiv3 {
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 2px;
+    font-family: bradley hand, cursive;
+    font-weight: 500;
+    font-size: 4rem;
+} 
+#divi {
+    padding: 8px;
+}
+
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+    
+.pad15 {
+    height: 500px;
+    min-height: 500px;
+    border-radius: 10px;
+    background-color: white;
+
+} #principal {
+    height: 290px;
+    min-height: 290px;
+    border-radius: 10px;
+    border-radius: 10px;
+} #titulo {
+    color: rgb(87, 87, 87);
+    font-family: bradley hand, cursive;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+}
+#desc {
+    background-color: white;
+    
+} #descbox {
+    padding-top: 20px;
+    height: 400pc;
+    width: 400pc;
+    color: white;
+} 
+#div1 {
+    display: inline-block;
+    padding-left: 4px;
+}
+
+
+#imagex {
+    float: left;
+    padding-right: 10px;
+    border-radius: 40px;
+}
+#description {
+    text-align: center;
+    font-size: 2rem;
+    font-family: bradley hand, cursive;
+    color: rgb(84, 84, 84);
+     
+} #back{
+    text-align: left;
+} #product_type {
+    text-transform: capitalize;
+   
+} #description2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: bradley hand, cursive;
+    color: rgb(84, 84, 84);
+    padding: 10px;  
+
+    
+     
+} #ttl {
+    font-family: bradley hand, cursive;
+    padding-left: 20px;
+} #descboxx {
+    display: box;
+    position:-ms-page;
+    padding: 5px;
+   
+    
+} .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  } .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  } #ultimo {
+    padding-bottom: 50px;
+  } #seText {
+    height: 600px;
+  } .carousel-inner {
+    justify-content: center;
+    display: block;
+    height: auto;
+    text-align: center;
+  } .carousel-inner {
+    padding-top: 100px;
+    font-size: 200%;
+    width: 6em;
+    padding-left: 15%;
+    padding-right: 15%;
+  } #fundo {
+    display: flex;
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    background-color: red;
+    text-align: center;
+  } #titleDoc {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  } #textDOC {
+    text-align: center;
+  }#fim {
+    padding-bottom: 50px;
+  }

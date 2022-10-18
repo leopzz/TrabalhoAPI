@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="http://fonts.cdnfonts.com/css/alexandra-signature" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+    <title>MakeUp</title>
+
+  </head>
+  <body id="back">
+   <!-- Menu -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+<div id="paidiv"class="navbar navbar-inverse">
+        <div id=""class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                        <a id="sondiv2" href="index.html" class="navbar-brand">MakeUp</a>
+                    </div>
+
+                    <div class="navbar-collapse collapse" id="mobile_menu">
+                        <ul id=""class="nav navbar-nav">
+                          
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?blush">Blush</a></li>
+                            </div>
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?lipstick">Lipstick</a></li>
+                            </div>
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?bronzer">Bronzer</a></li>
+                            </div>
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?eyeshadow">Eyeshadow</a></li>
+                            </div>   
+                        </ul>
+                        
+
+                        
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carrosel -->
+    <div id ="back" class="container-fluid">
+      <div id="sondiv3">
+          <p id="product_type"></p>
+      </div>
+    <div class="container">
+      <div class="row">
+        <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                <div id="principal" class="MultiCarousel-inner">
+                    </div>
+                <button class="btn btn-primary leftLst"><</button>
+                <button class="btn btn-primary rightLst">></button>
+            </div>
+      </div>
+
+      <div id="desc" class="container-fluid">
+        
+      </div>
+
+
+    
+
+
+
+
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <br/><br/><br/>
+              <hr/>
+              <p>Desenvolved by MakeUp</p>
+              <p>Alunos Lucas Lang e Leonardo Pellizzari </p>
+              
+          </div>
+      </div>
+    </div>
+    <!-- API Call -->
+    <script>
+      var takeType = window.location.href;
+      takeType = takeType.split("?")
+      takeType = takeType[1]
+      console.log(takeType)
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", 'https://makeup-api.herokuapp.com/api/v1/products.json/?product_type='+takeType, false);
+      xhttp.send();
+      var retorno = JSON.parse(xhttp.responseText);
+      console.log(retorno)
+
+      var divpai = document.querySelector('#principal')
+    for (var ft in retorno) {
+          var id = ft
+          var divpaii = document.querySelector('#principal').innerHTML;
+          divpai.innerHTML = `<div class="item">
+          <div onClick="openWindow(this.id, this.id)"id="card"class="pad15">
+              <p id ="titulo" class="lead">Multi Item Carousel</p>
+              <img id="image" src="" alt="" class="img-fluid">
+              <a id="but"/></a>
+          </div>
+      </div> `+divpaii;
+      
+        var but = document.getElementById('card')
+        but.setAttribute("id", ft+"/"+retorno[ft].product_type)
+        
+          var titulo = document.getElementById('titulo');
+          titulo.innerHTML = retorno[ft].name;
+          var image = document.getElementById('image');
+          image.src = retorno[ft].image_link;
+    
+    }   
+      
+
+      var titling = document.getElementById('product_type')
+      titling.innerHTML = takeType
+
+
+      
+    </script>
+     
+
+
+      
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

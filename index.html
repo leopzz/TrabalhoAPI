@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="http://fonts.cdnfonts.com/css/alexandra-signature" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+    <title>MakeUp</title>
+
+  </head>
+  <body id="back">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   
+    
+    <!-- Menu -->
+<div id="paidiv"class="navbar navbar-inverse">
+        <div id=""class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                        <a id="sondiv2" href="index.html" class="navbar-brand">MakeUp</a>
+                    </div>
+
+                    <div class="navbar-collapse collapse" id="mobile_menu">
+                        <ul id=""class="nav navbar-nav">
+                          
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?blush">Blush</a></li>
+                            </div>
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?lipstick">Lipstick</a></li>
+                            </div>
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?bronzer">Bronzer</a></li>
+                            </div>
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?eyeshadow">Eyeshadow</a></li>
+                            </div>
+                            
+                        </ul>
+                        
+
+                        
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Itens -->
+<h1 id="ttl"> Blush </h1>
+<div class="container-fluid">
+
+  
+  <img id="imagex" src="" alt=""class="img img-fluid">
+  <div class ="container-fluid" id="descboxx">
+  <h2 id="description2">Blush can be used when finishing make-up, it serves to give a blush to the skin ensuring a healthy skin color for the face. Another function of the face is to cooperate so that the makeup has a natural aesthetic. To use this product, a light brush stroke over the cheekbones makes all the difference.</h2>
+</div>
+  
+</div>
+<!-- Request Image -->
+<script>
+  var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", 'https://makeup-api.herokuapp.com/api/v1/products.json/?product_type=blush', false);
+      xhttp.send();
+      var retorno = JSON.parse(xhttp.responseText);
+      var imagem = retorno[10].image_link;
+      var image1 = document.getElementById('imagex');
+      image1.src = imagem
+</script>
+
+<hr class="reveal">
+
+<h1 class="reveal" id="ttl"> Lipstick </h1>
+<div class="container-fluid reveal">
+  <img id="imagex" src="https://d3t32hsnjxo7q6.cloudfront.net/i/b66c56aeb8d078123cca4c9c64d17cb9_ra,w158,h184_pa,w158,h184.jpeg" width=400 alt=""class="img img-fluid">
+  <h2 id="description2">Lipstick is a cosmetic used to color and enhance the mouth. It is presented in several colors, glossy or non-shiny versions, such as shimmering, opaque, moisturizing or glossy ones, in order to meet the most diverse tastes.</h2>
+
+  
+</div class="reveal">
+
+<hr>
+
+<h1 class="reveal"id="ttl"> Bronzer </h1>
+<div class="container-fluid reveal">
+  <img id="imagex" src="https://www.nyxcosmetics.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-cpd-nyxusa-master-catalog/default/dw5248da3f/ProductImages/Face/Illuminator/800897809003_illuminator_narcissistic_main.jpg?sw=390\u0026sh=390\u0026sm=fit" width=400 alt=""class="img img-fluid">
+  <h2 id="description2">As the name implies, the bronzer aims to tan the skin. Generally, it has a lot of luminosity, that is, it brings a certain sparkle through glitter or other elements that cause the shiny effect.</h2>
+
+  
+</div>
+
+<hr class="reveal">
+
+<h1 class="reveal"id="ttl"> Eyeshadow </h1>
+<div id="ultimo"class="container-fluid reveal">
+  <img id="imagex" src="https://www.dior.com/beauty/version-5.1432748111912/resize-image/ep/0/390/100/0/packshots%252FPDG_Y0929540.jpg" width=400 alt=""class="img img-fluid">
+  <h2 id="description2">Eyeshadow is a cosmetic product commonly used to make the eyes of the wearer stand out to appear more attractive, and should be applied to the eyelids and eyebrows. The eyeshadow adds depth and dimension, complements the color, or simply draws attention to the eye area.</h2>
+
+  
+</div>
+
+
+
+    
+
+    
+
+
+
+
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <br/><br/><br/>
+              <a href="de">Documentation</a>
+              <hr/>
+              <p>Desenvolved by MakeUp</p>
+              <p>Alunos Lucas Lang e Leonardo pellizzari</p> 
+          </div>
+      </div>
+    </div>
+
+
+
+      
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

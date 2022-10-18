@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="http://fonts.cdnfonts.com/css/alexandra-signature" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+    <title>MakeUp</title>
+
+  </head>
+  <body id="back">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+<div id="paidiv"class="navbar navbar-inverse">
+        <div id=""class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                        <a id="sondiv2" href="index.html" class="navbar-brand">MakeUp</a>
+                    </div>
+
+                    <div class="navbar-collapse collapse" id="mobile_menu">
+                        <ul id=""class="nav navbar-nav">
+                          
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?blush">Blush</a></li>
+                            </div>
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?lipstick">Lipstick</a></li>
+                            </div>
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?bronzer">Bronzer</a></li>
+                            </div>
+                            <div id="divi">
+                              <li><a id="sondiv1"href="type.html?eyeshadow">Eyeshadow</a></li>
+                            </div>
+                            
+                        </ul>
+                        
+
+                        
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id ="back" class="container-fluid">
+      <div id="sondiv3">
+        <h1 id="titl"></h1>
+      </div>
+      <div id="div2"class="container-fluid">
+        <div id="div1"class="row">
+            <img class="img img-fluid"id="imagex" src="" alt="" width=400>
+            <p id="description">
+
+            </p>
+        </div>
+    </div>
+
+
+
+
+      <script type = "text/javascript"> 
+         function msgprint() {
+            var typex = document.querySelector("#titl").innerText
+            typex = typex.toLowerCase()
+
+            var takeid = window.location.href;
+            takeid = takeid.split('ml?');
+            takeid = takeid[1].split('/');
+            id = takeid[0];
+            type = takeid[1];            
+            var xhttp = new XMLHttpRequest();
+            
+            xhttp.open("GET", 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type='+type, false);
+            xhttp.send();
+            var retorno = JSON.parse(xhttp.responseText);
+            
+            document.getElementById("titl").innerHTML = retorno[id].name
+            var imagex = document.getElementById('imagex');
+            imagex.src = retorno[id].image_link;
+
+            
+            var descrip = document.getElementById("description")
+            descrip.innerHTML = retorno[id].description
+            
+
+            
+            
+         }  
+         msgprint();
+         
+         
+         </script>  
+    
+    
+
+
+
+
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <br/><br/><br/>
+              <hr/>
+              <p>Desenvolved by MakeUp</p>
+              <p>Alunos Lucas Lang e Leonardo Pellizzari </p>
+          </div>
+      </div>
+    </div>
+     
+
+
+      
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
